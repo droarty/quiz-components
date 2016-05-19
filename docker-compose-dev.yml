@@ -1,0 +1,9 @@
+client:
+  container_name: client
+  build: .
+  ports:
+   - "80:5000"
+  external_links:
+   - server
+  volumes:
+  - .:/usr/src/app

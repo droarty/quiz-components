@@ -1,0 +1,8 @@
+.git
+.gitignore
+public/static/*
+node_modules
+Profile
+README*.md
+log/*
+docker-compose*.yml

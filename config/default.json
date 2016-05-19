@@ -1,0 +1,11 @@
+{
+  "port": 8088,
+  "development": true,
+  "server_base_url": "http://frontier.dev:3000",
+  "logging_format": "combined",
+  "log_file_name": "development.log",
+  "new_relic_license_key": "",
+  "new_relic_app_name": "",
+  "new_relic_enabled": false,
+  "google_analytics_tracking_id": "UA-22222247-11"
+}

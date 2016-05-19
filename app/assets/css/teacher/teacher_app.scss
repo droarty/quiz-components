@@ -1,0 +1,184 @@
+@import 'app/assets/css/_colors';
+
+body {
+  background-color: $grey-light;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+}
+
+* {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+.teacher-menu {
+  .navbar-brand {
+    img {
+      height: 26px;
+    }
+    padding-top: 10px;
+  }
+
+  .navbar-inverse {
+    .navbar-nav {
+      >.open {
+        >a, >a:focus, >a:hover {
+          background-color: $teal-medium-dark;
+        }
+      }
+
+      .dropdown-menu>li>a {
+        color: white;
+        font-weight: 300;
+      }
+    }
+
+    .navbar-toggle {
+      background: $teal-medium-dark;
+    }
+
+    .navbar-collapse, .navbar-form {
+      border: none;
+    }
+  }
+
+  .navbar {
+    color: white;
+    background-color: $teal-medium-dark;
+    border: 0;
+  }
+
+  .navbar-header {
+    button {
+      border-color: white;
+      background-color: $teal-medium-dark;
+    }
+  }
+
+  a.navbar-brand {
+    color: white;
+  }
+
+  .navbar-nav {
+    li {
+      a {
+        color: white;
+      }
+      a.active {
+        font-weight: 500;
+      }
+      a.not-active {
+        color: $teal-medium-light;
+      }
+    }
+  }
+
+  .navbar-inverse {
+    .navbar-nav .open .dropdown-menu > li > a {
+      color: $grey-dark;
+    }
+  }
+}
+
+.students-list {
+  .table {
+    box-shadow: 1px 1px 2px $grey-medium;
+
+    thead:first-child>tr:first-child>th {
+      border-bottom: none;
+    }
+
+    .reactable-column-header {
+      color: white;
+      background-color: $teal-medium-dark;
+      th {
+        font-weight: 500;
+      }
+      .reactable-header-sortable {
+         background: url("../../img/sort-arrow-white.png") no-repeat 100%;
+         background-size: 28px;
+      }
+    }
+
+    .reactable-data {
+      background: white;
+    }
+
+    .student-name {
+      font-weight: bold;
+      font-weight: 500;
+    }
+
+    .project-title {
+      font-style: italic;
+    }
+
+    .teacher-actions {
+      div {
+        display: inline-block;
+      }
+      span {
+        font-weight: 400;
+      }
+      i {
+        padding-right: 5px;
+      }
+    }
+  }
+}
+
+// Tooltip adds a div at the bottom of the page, not within the student list
+.tooltip-inner {
+  div {
+    text-align: left;
+
+    span.student-name > span {
+      font-weight: 500;
+    }
+  }
+}
+
+.teacher-alerts {
+  .greeting {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  .notification-group-title {
+    color: $teal-medium-dark;
+    padding: 20px 15px 5px 5px;
+
+    span {
+      font-weight: 800 !important;
+    }
+
+    i {
+      padding-right: 10px;
+    }
+  }
+
+  .notification-group {
+    box-shadow: 1px 1px 2px #bbb;
+    background-color: $white;
+
+    .notification {
+      padding: 10px 18px;
+    }
+    .notification:not(:last-child) {
+      border-bottom: 1px $grey-light solid
+    }
+
+    span.student-name, .student-name > span {
+      font-weight: 500;
+    }
+
+    .project-name {
+      font-style: italic;
+    }
+
+    .project-link {
+      color: $teal-medium-dark;
+      padding-left: 15px;
+    }
+  }
+}

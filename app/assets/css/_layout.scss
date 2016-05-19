@@ -1,0 +1,97 @@
+// Background is teal when student is selecting a project and giving feedback.
+// Background is white while student is mid-project.
+body {
+  background-color: $teal-light;
+}
+
+.white-background-underlay {
+  background-color: $white;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+
+  padding: 0;
+  margin: 0;
+}
+
+.content-area {
+  padding-top: 85px;
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: $grey-medium-light;
+}
+
+.square-image {
+  // Override the width to change size of square.
+  // Override padding-bottom percentage to achieve ratios other than 1:1.
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  background-size: cover;
+}
+
+.sticky-note {
+  background-color: $yellow-light;
+  font-family: $handwritten-note-font;
+  font-weight: 400;
+  color: $grey-dark-medium;
+  box-shadow: 2px 2px 2px $grey-medium;
+  -webkit-box-shadow: 2px 2px 2px $grey-medium;
+  -moz-box-shadow: 2px 2px 2px $grey-medium;
+  border: none;
+
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.tooltip-inner {
+  border-radius: 0px;
+}
+
+iframe {
+  border: none;
+}
+
+.full-width-split-container-for-iframe {
+  .content-left {
+    position: fixed;
+    width: 67%;
+    height: 75%;
+    padding: 15px;
+  }
+
+  .content-right {
+    position: absolute;
+    left: 67%;
+    width: 33%;
+    height: 90%;
+    padding: 15px;
+  }
+
+  .fill-height {
+    position: fixed;
+    width: 98%;
+    height: 95%;
+    overflow-y: scroll;
+    /* a fix to allow scrolling iframes in iPad
+      Thanks to https://davidwalsh.name/scroll-iframes-ios */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  iframe {
+    width: 66%;
+    height: 100%;
+  }
+}

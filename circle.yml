@@ -1,0 +1,22 @@
+machine:
+  node:
+    version: 5.5.0
+
+  services:
+    - docker
+
+dependencies:
+  pre:
+    - if [[ "master" == "$CIRCLE_BRANCH" ]] ; then docker build -t espark/frontier_client:${CIRCLE_BUILD_NUM}-${CIRCLE_SHA1} . ; else echo "Skipping docker build" ; fi
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - docker info
+      - docker version
+      - docker login -e $DOCKER_EMAIL -u ${DOCKER_USER} -p ${DOCKER_PASS}
+      - docker tag espark/frontier_client:${CIRCLE_BUILD_NUM}-${CIRCLE_SHA1} espark/frontier_client:latest
+      - docker images
+      - docker push espark/frontier_client:${CIRCLE_BUILD_NUM}-${CIRCLE_SHA1}
+      - docker push espark/frontier_client:latest

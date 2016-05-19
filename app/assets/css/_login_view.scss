@@ -1,0 +1,54 @@
+.login-view {
+  p {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    margin: 48px 0px;
+  }
+
+  .espark-logo {
+    height: 28px;
+    margin-left: 24px;
+    margin-top: 20px;
+  }
+
+  .logo-area {
+    padding-top: 85px;
+
+    .frontier-logo {
+      height: 125px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .login-em {
+      font-weight: 250;
+      color: $teal-medium;
+      font-family: $login-em-font;
+      letter-spacing: 1px;
+    }
+
+    @media screen and (max-width: 440px) {
+      .frontier-logo {
+        height: 75px;
+      }
+      p {
+        font-size: 14px;
+        margin: 30px 2px;
+      }
+    }
+  }
+
+  .unrecognized-login {
+    p {
+      font-size: 14px;
+      margin: 0;
+      padding-bottom: 12px;
+    }
+
+    .error-message {
+      color: red;
+    }
+  }
+}

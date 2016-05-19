@@ -1,0 +1,48 @@
+/* Generated with `eslint --init` and tweaked to fix issues that cropped up */
+{
+  "rules": {
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "quotes": [
+      2,
+      "single"
+    ],
+    "linebreak-style": [
+      2,
+      "unix"
+    ],
+    "semi": [
+      2,
+      "never"
+    ],
+    "space-after-keywords": [
+      2,
+      "always"
+    ],
+    "no-trailing-spaces": 2,
+    // This is necessary because the React reference needs to be present for
+    // app.jsx and routes.jsx, otherwise it breaks all rendering/routing.
+    // Read more here: https://github.com/yannickcr/eslint-plugin-react
+    "react/jsx-uses-react": 1,
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "ecmaFeatures": {
+    "jsx": true,
+    "experimentalObjectRestSpread": true,
+    "modules": true,
+    "module": true
+  },
+  "plugins": [
+    "react"
+  ]
+}

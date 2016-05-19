@@ -1,0 +1,13 @@
+/* Generated with `eslint --init` and tweaked to fix issues that cropped up */
+{
+  "globals":{
+    "describe": false,
+    "it": false,
+    "expect": false,
+    "jest": false,
+    "ReactDOM": false,
+    "beforeEach": false,
+    "runs": false,
+    "waitsFor": false
+  }
+}

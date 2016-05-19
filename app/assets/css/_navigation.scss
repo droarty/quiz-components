@@ -1,0 +1,39 @@
+.student-app-menu {
+  img {
+    height: 35px;
+    padding-top: 8px;
+  }
+
+  @media screen and (max-width: 770px) {
+    img {
+      padding-left: 15px;
+    }
+  }
+}
+
+.nav-tabs-row {
+  background-color: $grey-dark;
+  position: fixed;
+  width: 100%;
+  z-index: 1020;
+}
+
+.project-view-nav-tabs {
+  margin-top: 40px;
+  max-height: 40px;
+  overflow-y: hidden;
+  border-bottom: 0px;
+
+  li {
+    background-color: $grey-dark;
+    a {
+      color: $white;
+    }
+  }
+  li.active, li:hover {
+    background-color: $white;
+    a {
+      color: $grey-dark;
+    }
+  }
+}
